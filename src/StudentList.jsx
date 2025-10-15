@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import BackBtn from './BackBtn';
 
 export default function StudentList() {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ export default function StudentList() {
             )
         })}
       </ol>
+      <br /><br /><BackBtn label={'Back to List'} /> <br /><br />
     </div>
   )
 }

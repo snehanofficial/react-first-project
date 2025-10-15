@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import BackBtn from './BackBtn';
 
 export default function Timer() {
     const [time, setTime] = useState(0);
@@ -20,6 +21,7 @@ export default function Timer() {
       <h3 id="timer-display" style={{display:'inline-block'}}>{time} s </h3> <button onClick={() => setRunning(!isRunning)}>{(isRunning) ? "Pause" : "Resume"}</button><br />
       <label htmlFor="delayInput">Enter the time interval: </label>
       <input type="number" id='delayInput' value={delay} placeholder='Enter time interval' onChange={(e) => {setDelay(e.target.value)}}/>
+      <br /><br /><BackBtn label={'Back to List'} /> <br /><br />
     </div>
   )
 }

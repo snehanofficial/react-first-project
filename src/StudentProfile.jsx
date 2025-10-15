@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSearchParams } from 'react-router-dom';
+import BackBtn from './BackBtn';
 
 export default function StudentProfile() {
     const [searchParams] = useSearchParams();
@@ -14,6 +15,7 @@ export default function StudentProfile() {
       <h3>Name: {name}</h3>
       <h3>Department: {department}</h3>
       <h3>Email: <a href={`mailto:${email}`}>{email}</a></h3>
+      <br /><br /><BackBtn label={'Back to List'} /> <br /><br />
     </div>
   )
 }
