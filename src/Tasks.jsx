@@ -23,7 +23,7 @@ export default function Tasks() {
         {components.map((component) => (
           <>
           <li key={component.id}>
-            <span style={{ textTransform: 'capitalize' }}>{component.name}  </span>
+            <span style={{ textTransform: 'capitalize' }}>{component.name.replace(/-/g, ' ')}  </span>
             <Link to={`/tasks/view/${component.name}`}>
               <button type="button">View</button>
             </Link>
